@@ -1,0 +1,98 @@
+/* Valutin Performance — visual alinhado ao editor, sem alterar o storefront. */
+
+.dash-paper {
+  --color-cream: 248 247 245;
+  --color-brand: 82 108 135;
+  --dash-surface: 255 255 255;
+  min-height: 100vh;
+  background: #f8f7f5;
+}
+
+.dash-surface {
+  background: #fff;
+  border: 1px solid rgb(var(--color-ink) / 0.1);
+}
+
+.dash-rule {
+  border-color: rgb(var(--color-ink) / 0.1);
+}
+
+.dash-masthead {
+  background: #fff;
+  border-bottom: 1px solid rgb(var(--color-ink) / 0.1);
+}
+
+.dash-segment {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid rgb(var(--color-ink) / 0.12);
+  background: #fff;
+}
+
+.dash-segment button {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(var(--color-ink) / 0.5);
+  transition: color 0.15s, background 0.15s;
+}
+
+.dash-segment button[data-active="true"] {
+  background: #526c87;
+  color: #fff;
+}
+
+.dash-segment button[data-active="brand"] {
+  background: #526c87;
+  color: #fff;
+}
+
+.dash-segment button:hover:not([data-active="true"]):not([data-active="brand"]) {
+  color: rgb(var(--color-ink));
+}
+
+.dash-nav-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.dash-nav-group-label {
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgb(var(--color-ink) / 0.35);
+}
+
+.dash-subtab {
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.65rem 0;
+  margin-right: 1.25rem;
+  border-bottom: 2px solid transparent;
+  color: rgb(var(--color-ink) / 0.4);
+  white-space: nowrap;
+}
+
+.dash-subtab[data-active="true"] {
+  border-bottom-color: #526c87;
+  color: #526c87;
+}
+
+.dash-subtab:hover {
+  color: rgb(var(--color-ink) / 0.75);
+}
+
+.dash-paper button.bg-ink {
+  background-color: #526c87;
+  color: #fff;
+}
+
+.dash-paper button.bg-ink:hover {
+  background-color: #415873;
+}

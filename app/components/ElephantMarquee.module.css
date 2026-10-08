@@ -1,0 +1,136 @@
+.marquee {
+  position: relative;
+  height: clamp(88px, 7.5vw, 108px);
+  overflow: hidden;
+  border-block: 1px solid rgb(255 255 255 / 0.28);
+  background: rgb(var(--color-brand));
+}
+
+.marquee::before,
+.marquee::after {
+  position: absolute;
+  z-index: 2;
+  inset-block: 0;
+  width: clamp(22px, 4vw, 64px);
+  content: "";
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(var(--color-brand)), transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(var(--color-brand)), transparent);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  animation: elephants-loop 44s linear infinite;
+  will-change: transform;
+}
+
+.group {
+  display: flex;
+  flex: none;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 0;
+  padding-block: 12px;
+}
+
+.item {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: clamp(34px, 4vw, 62px);
+  padding-right: clamp(34px, 4vw, 62px);
+}
+
+.elephants {
+  display: block;
+  flex: none;
+  width: auto;
+  max-width: none;
+  height: clamp(46px, 4.4vw, 62px);
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.94;
+}
+
+.signature {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo {
+  display: block;
+  width: clamp(88px, 8.5vw, 116px);
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.88;
+}
+
+.since {
+  color: rgb(255 255 255 / 0.58);
+  font-family: var(--font-poppins);
+  font-size: 7px;
+  line-height: 1;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+@keyframes elephants-loop {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .marquee {
+    height: 76px;
+  }
+
+  .track {
+    animation-duration: 36s;
+  }
+
+  .group {
+    padding-block: 10px;
+  }
+
+  .item {
+    gap: 28px;
+    padding-right: 28px;
+  }
+
+  .elephants {
+    height: 42px;
+  }
+
+  .logo {
+    width: 78px;
+  }
+
+  .since {
+    font-size: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand: 133 160 190;
+  --color-brand-strong: #526c87;
+  --color-brand-light: 174 183 196;
+  --color-cream: 249 236 221;
+  --color-ink: 26 26 26;
+  --font-playfair: "Playfair Display", Georgia, serif;
+  --font-poppins: "Poppins", system-ui, sans-serif;
+  --catalog-surface: #f8ecdd;
+}
+
+/* Uma única base para fotos de produto: a imagem pode variar, a vitrine não. */
+.catalog-product-surface { background-color: var(--catalog-surface); }
+.spring-look-track { scrollbar-width: none; }
+.spring-look-track::-webkit-scrollbar { display: none; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dashboard editorial — Valutin atelier */
+:root {
+  --dash-paper: 249 236 221;
+  --dash-surface: 255 252 248;
+  --dash-rule: 174 183 196;
+}
+
+/* Keep the soft brand palette while giving controls readable contrast. */
+:focus-visible { outline: 3px solid #40566e; outline-offset: 4px; }
+.skip-link { position: fixed; left: 1rem; top: -6rem; z-index: 200; padding: 1rem; background: white; color: #263c53; border: 2px solid currentColor; }
+.skip-link:focus { top: 1rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+#vt-craft{--vt-k:c417c27ac25c702834b9019afa34376c}
+.veltrus-seal{margin:18px 0 0;padding:16px 8px 4px;border-top:1px solid rgba(127,127,127,.22);text-align:center;font:700 11px/1.4 system-ui,-apple-system,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.veltrus-seal a{color:inherit;opacity:.78;display:inline-block;min-height:44px;padding:12px 8px;text-decoration:none}
+.veltrus-seal strong{font-weight:800}
+html[data-vt="lock"] body{overflow:hidden}
+html[data-vt="lock"] body > *:not(#vt-craft){pointer-events:none!important;filter:grayscale(1) brightness(.22);user-select:none}
+.info-page-content section h2 {
+  margin-bottom: 1rem;
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.65rem, 3vw, 2rem);
+  line-height: 1.2;
+  color: #213448;
+}
+
+.info-page-content section p,
+.info-page-content section li {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.9;
+}
+
+.info-page-content section p + p { margin-top: 1rem; }
+.info-page-content section ul { margin-left: 1.25rem; list-style: disc; }
+.info-page-content section li + li { margin-top: 0.5rem; }
+.info-page-content section a:not(.info-page-button):not(.info-page-button-outline) {
+  color: #526c87;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.info-page-button,
+.info-page-button-outline {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #526c87;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color .2s, color .2s;
+}
+
+.info-page-button { background: #526c87; color: white; }
+.info-page-button:hover { background: #40566e; }
+.info-page-button-outline { background: transparent; color: #40566e; }
+.info-page-button-outline:hover { background: #526c87; color: white; }
