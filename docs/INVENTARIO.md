@@ -12,7 +12,7 @@
 | `apps/kommo-mcp`, `mcp/`, `n8n/`, `scripts/exports/` | **Excluídos** | Ferramentas, fluxos e exports operacionais; podem conter identificadores, dados de lead ou detalhes de acesso. |
 | `reports/`, `exports/`, `output/` e planilhas | **Excluídos** | Material de auditoria, mídia ou campanhas; parte contém evidência datada, dados comerciais ou arquivos não revisados para divulgação. |
 | `.env*`, `.vercel`, dados de Postgres, tokens e backups | **Excluídos** | Segredos e estados locais nunca pertencem a um repositório público. `.env.example` é somente uma lista de nomes de configuração. |
-| Repositório Git privado original | **Histórico não copiado** | Este repositório tem histórico novo; branches e commits antigos não são publicados em conjunto. |
+| Repositório Git operacional original | **Histórico não copiado** | Este repositório tem histórico novo; branches e commits antigos não são publicados em conjunto. A visibilidade atual do original deve ser auditada separadamente. |
 
 ## Proveniência técnica
 

@@ -37,4 +37,4 @@ O catálogo atual usa **venda assistida**: descoberta no site e conclusão com a
 
 ## Proveniência e privacidade
 
-Este é um repositório de entrega com histórico novo, separado dos repositórios e dados operacionais privados. A documentação é uma síntese datada de arquivos locais e verificações públicas; não deve ser interpretada como atestado de saúde atual de Kommo, Linx, n8n, Meta, Google ou Supabase. Veja [o inventário](docs/INVENTARIO.md) antes de ampliar o escopo.
+Este é um repositório de entrega com histórico novo, separado dos repositórios operacionais e de seus dados privados. A documentação é uma síntese datada de arquivos locais e verificações públicas; não deve ser interpretada como atestado de saúde atual de Kommo, Linx, n8n, Meta, Google ou Supabase. Veja [o inventário](docs/INVENTARIO.md) antes de ampliar o escopo.
